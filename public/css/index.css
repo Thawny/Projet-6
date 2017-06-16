@@ -1,0 +1,117 @@
+@font-face {
+  font-family: brushsci;
+  src: url(../fonts/brushsci.ttf); }
+body {
+  height: 3000px;
+  font-family: 'Lato', sans-serif;
+  background-color: #e4e4e4;
+  padding: 5px;
+  padding-right: 0; }
+  body #modal-dark {
+    position: fixed;
+    height: 101vh;
+    width: 100vw;
+    background-color: blue;
+    z-index: 100;
+    margin: -10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; }
+  body #modal-image {
+    position: fixed;
+    z-index: 200;
+    height: 90%;
+    margin-top: 2.5%;
+    background-color: transparent;
+    display: none; }
+    body #modal-image img {
+      height: 100%; }
+  body aside {
+    height: 99.2vh;
+    width: 23%;
+    position: fixed;
+    border-bottom: 5px solid white;
+    background-color: #444444; }
+    body aside #logo {
+      width: 60%;
+      margin-left: 20%;
+      margin-top: 10%; }
+    body aside p {
+      color: white;
+      font-size: 1.1em;
+      text-align: center;
+      padding: 20px;
+      padding-top: 30px; }
+    body aside ul {
+      padding-left: 0;
+      text-align: center;
+      font-weight: bold; }
+      body aside ul li {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-size: 1.2em;
+        list-style-type: none;
+        color: white;
+        margin-left: 0; }
+      body aside ul li:hover {
+        background-color: white;
+        color: black; }
+      body aside ul #galerie {
+        border-top: 1px solid white; }
+      body aside ul #billets {
+        border-top: 1px solid white; }
+      body aside ul #contacts {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white; }
+    body aside #fb {
+      background: url("../images/fb3.png") no-repeat;
+      width: 50px;
+      height: 50px;
+      background-size: 100%;
+      margin-left: 0px;
+      margin-top: 40px;
+      background-position: 50% top;
+      transition: background-position 0.2s;
+      display: inline-block; }
+    body aside #fb:hover {
+      background-position: 50% bottom; }
+    body aside #pinterest {
+      background: url("../images/pinterest.png") no-repeat;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-size: 100%;
+      margin-left: 20px;
+      margin-top: 40px;
+      background-position: 50% top;
+      transition: background-position 0.2s; }
+    body aside #pinterest:hover {
+      background-position: 50% bottom; }
+    body aside #blogger {
+      background: url("../images/blogger.png") no-repeat;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-size: 100%;
+      margin-left: 20px;
+      margin-top: 40px;
+      background-position: 50% top;
+      transition: background-position 0.2s; }
+    body aside #blogger:hover {
+      background-position: 50% bottom; }
+  body section {
+    margin-left: 23%;
+    width: 76.4%; }
+    body section .image-box {
+      width: 50%;
+      margin-top: 5px;
+      padding-left: 6px;
+      cursor: pointer;
+      float: left; }
+      body section .image-box img {
+        width: 100%; }
+    body section .first {
+      margin-top: 0 !important; }
+    body section .second {
+      margin-top: 0 !important; }
+
+/*# sourceMappingURL=index.css.map */

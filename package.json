@@ -1,0 +1,24 @@
+{
+  "name": "christian",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "sass-watch": "sass --watch public/scss:public/css",
+    "devstart": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "mongoose": "^4.10.5",
+    "morgan": "~1.8.1",
+    "pug": "~2.0.0-beta11",
+    "random-id": "0.0.2",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
