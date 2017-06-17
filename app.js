@@ -9,14 +9,9 @@ var db = require('./db');
 var Article = require('./models/Article').model();
 var Image = require('./models/Image');
 
-// var testArticle = new Article({
-//     title: "Titre de mon article",
-//     body: "Body de mon article"
-// });
-// testArticle.save(function (err) {
-//   if (err) return handleError(err);
-//   // saved!
-// })
+var insertImage = require('./writeDB');
+insertImage('Retro', 'huile sur toile', 'jKLhvnGJbffhCxszb1h4');
+insertImage('La belle rose', 'huile sur toile', 'tO4QHq07AwmPe36hJN2H');
 
 
 var index = require('./routes/index');

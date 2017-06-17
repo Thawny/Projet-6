@@ -6,6 +6,7 @@ var ImageSchema = new Schema({
     title: String,
     meta: String,
     addDate: {type: Date, default: Date.now},
+    pathId: String,
     article: [ArticleSchema]
 });
 

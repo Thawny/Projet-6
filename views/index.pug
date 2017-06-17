@@ -15,6 +15,7 @@ block content
       |relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt
       |ibique densis intersaepientes itinera praetenturis provincialium et viatorum opibus pascebantur.
 
+
     ul
       li#galerie Galerie
       li#billets Billets
@@ -26,26 +27,9 @@ block content
 
 
   section#masonry
-      div(class="image-box first")
-          img(id="one" src="images/hotesse.jpg" onclick="modalOn(this)")
-      div(class="image-box second")
-          img(src="images/cigarette.jpg" onclick="modalOn(this)")
-      div.image-box
-          img(src="images/turban.jpg" onclick="modalOn(this)")
-      div.image-box
-          img(src="images/cannes.jpg" onclick="modalOn(this)")
-      div.image-box
-          img(src="images/hivers.jpg" onclick="modalOn(this)")
-      div.image-box
-          img(src="images/rose.jpg" onclick="modalOn(this)")
-      div.image-box
-          img(src="images/cocktail.jpg" onclick="modalOn(this)")
-      div.image-box
-          img(src="images/retro.jpg" onclick="modalOn(this)")
-      div.image-box
-          img(src="images/fleurs.jpg" onclick="modalOn(this)")
-      div.image-box
-          img(src="images/plage.jpg" onclick="modalOn(this)")
+    each image in images
+        div.image-box
+            img(src='images/' + image.pathId +'.jpg' onclick="modalOn(this)")
 
 
 block script

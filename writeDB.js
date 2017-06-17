@@ -1,5 +1,15 @@
-db.articles.insert({
-    addDate: Date(),
-    body "Le body de mon premier article",
-    title: "Le title de mon premier article!"
-});
+var Image = require('./models/Image');
+
+var insertImage = function(title, meta, pathId) {
+    var image = new Image({
+        title: title,
+        meta: meta,
+        pathId: pathId
+    });
+    image.save(function (err) {
+      if (err) return handleError(err);
+      // saved!
+  });
+}
+
+module.exports = insertImage;
