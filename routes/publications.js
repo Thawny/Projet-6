@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  res.send('Ici la page principale des billets');
+    res.render('all_articles');
 });
 
 router.get('/:id', function(req, res) {

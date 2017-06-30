@@ -2,40 +2,10 @@
   font-family: brushsci;
   src: url(../fonts/brushsci.ttf); }
 body {
-  height: 3000px;
   font-family: 'Lato', sans-serif;
   background-color: #e4e4e4;
   padding: 5px;
   padding-right: 0; }
-  body #modal-dark {
-    position: fixed;
-    height: 101vh;
-    width: 105vw;
-    background-color: blue;
-    z-index: 100;
-    margin: -10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none; }
-  body #modal-image {
-    position: fixed;
-    z-index: 200;
-    background-color: #444444;
-    display: none; }
-    body #modal-image img {
-      vertical-align: inherit !important;
-      display: inline-block !important;
-      float: left !important; }
-    body #modal-image #modal-meta {
-      color: white;
-      display: inline-block;
-      height: 100%; }
-      body #modal-image #modal-meta hr.title-line {
-        width: 50%; }
-      body #modal-image #modal-meta h4.method {
-        font-style: italic; }
-      body #modal-image #modal-meta p {
-        margin-left: 5% !important;
-        margin-right: 5% !important; }
   body aside {
     height: 99.2vh;
     width: 23%;
@@ -121,19 +91,29 @@ body {
     body aside #blogger:hover {
       background-position: 50% bottom; }
   body section {
-    margin-left: 23%;
-    width: 76.4%; }
-    body section .image-box {
+    margin-left: 23.5%;
+    width: 76.5%;
+    transform: translateY(-3px); }
+    body section .article-box {
       width: 50%;
+      border-right: 5px solid #e4e4e4;
+      border-bottom: 1.1px solid #e4e4e4;
       margin-top: 5px;
-      padding-left: 6px;
       cursor: pointer;
-      float: left; }
-      body section .image-box img {
+      float: left;
+      background-color: white;
+      color: #727374; }
+      body section .article-box img {
         width: 100%; }
+      body section .article-box .image-box {
+        width: 94%;
+        margin-left: 3%;
+        margin-top: 3%; }
+      body section .article-box .article-body {
+        padding: 3%; }
     body section .first {
       margin-top: 0 !important; }
     body section .second {
       margin-top: 0 !important; }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=publications.css.map */

@@ -4,11 +4,13 @@ var Image = require('../models/Image');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Image.find(function(err, images){
+  Image.find({}).sort({addDate: 'descending'}).exec(function(err, images){
       res.render('index', {images: images});
   });
-  // res.render('index', { images: images });
 });
 
+// Image.find(function(err, images){
+//     res.render('index', {images: images});
+// });
 
 module.exports = router;

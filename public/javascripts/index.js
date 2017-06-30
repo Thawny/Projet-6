@@ -30,8 +30,14 @@ $(function() {
         var marginLeft = (bodyWidth - w)/2;
         var marginLeftPX = (marginLeft.toString() + 'px');
 
+        // compute width for modal-image encart
+        var wNumber = Number(wPX.replace('px',''));
+        var properModalImageWidthNumber = wNumber;
+        var properModalImageWidthPX = (properModalImageWidthNumber.toString() + 'px');
+
         $('#modal-image').css('margin-left', marginLeftPX);
-        $('#modal-image').css('width', wPX);
+        // $('#modal-image').css('width', properModalImageWidthPX);
+        $('#modal-image > img').css('width', wPX);
         $("#modal-dark").fadeIn();
         $("#modal").attr("src",im.attr("src")).fadeIn();
         $("#modal-image").fadeIn();

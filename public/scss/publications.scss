@@ -7,50 +7,6 @@
 }
 
 body {
-    height: 3000px;
-    #modal-dark {
-        position: fixed;
-        height: 101vh;
-        width: 105vw;
-        background-color: blue;
-        z-index: 100;
-        margin: -10px;
-        background-color: rgba(0,0,0,0.7);
-        display: none;
-    }
-    #modal-image {
-        position: fixed;
-        z-index: 200;
-        // height: 90%;
-        // margin-top: 2.5%;
-        background-color: $darkgray;
-        display: none;
-        // border: 2px solid red;
-        img {
-            // height: 100%;
-            vertical-align: inherit !important;
-            display: inline-block !important;
-            float: left !important;
-        }
-        #modal-meta {
-            // background-color: blue;
-            color: white;
-            // border: 1px solid pink;
-            display: inline-block;  //NEW
-            height: 100%; //NEW
-            // width: 20vw;
-            hr.title-line {
-                width: 50%;
-            }
-            h4.method {
-                font-style: italic;
-            }
-            p {
-                margin-left: 5% !important;
-                margin-right: 5% !important;
-            }
-        }
-    }
     font-family: 'Lato', sans-serif;
     background-color: $lightgray;
     padding: 5px;
@@ -176,19 +132,37 @@ body {
         }
     }
     section {
-        margin-left: 23%;
-        width: 76.4%;
+        // margin-left: 23%;
+        // width: 76.4%;
+        margin-left: 23.5%;
+        width: 76.5%;
+        transform: translateY(-3px);
         // border: 1px solid black;
 
-        .image-box {
+        .article-box {
             width: 50%;
-            // border: 1px solid green;
+            border-right: 5px solid $lightgray;
+            border-bottom: 1.1px solid $lightgray;
             margin-top: 5px;
-            padding-left: 6px;
+            // margin-left: -1px;
+            // padding-left: 6px;
             cursor: pointer;
             float: left;
+            background-color: white;
+            // color: #585858;
+            color: #727374;
             img {
                 width: 100%;
+            }
+            .image-box {
+                width: 94%;
+                // border: 1px solid red;
+                margin-left: 3%;
+                margin-top: 3%;
+            }
+            .article-body {
+                padding: 3%;
+                // border: 1px solid blue;
             }
         }
         .first {

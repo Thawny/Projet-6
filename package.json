@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "sass-watch": "sass --watch public/scss:public/css",
-    "devstart": "nodemon ./bin/www"
+    "devstart": "nodemon ./bin/www",
+    "startall": "parallelshell 'mongod --dbpath /Users/TonyMalto/Documents/EXPRESS/Christian/data' 'sass --watch public/scss:public/css' 'nodemon ./bin/www' "
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -19,6 +20,7 @@
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "parallelshell": "^3.0.1"
   }
 }

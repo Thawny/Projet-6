@@ -10,13 +10,13 @@ var Article = require('./models/Article').model();
 var Image = require('./models/Image');
 
 var insertImage = require('./writeDB');
-insertImage('Retro', 'huile sur toile', 'jKLhvnGJbffhCxszb1h4');
-insertImage('La belle rose', 'huile sur toile', 'tO4QHq07AwmPe36hJN2H');
+// insertImage('La dame au turban', 'acrylique sur toile', 'LeiC0zDAktNHI0QvlSOC');
 
 
+// ROUTES
 var index = require('./routes/index');
 var users = require('./routes/users');
-var billets = require('./routes/billets');
+var publications = require('./routes/publications');
 var contacts = require('./routes/contacts');
 
 var app = express();
@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/billets', billets);
+app.use('/publications', publications);
 app.use('/contacts', contacts);
 
 

@@ -1,0 +1,81 @@
+extends layout
+block style
+    link(rel='stylesheet', href='/css/publications.css')
+
+block content
+
+
+  aside
+     h1 Christian
+       br
+       | Louis
+       br
+       | Malto
+     h3 Peintre
+
+
+     p
+       |Procedente igitur mox tempore cum adventicium nihil inveniretur,
+       |relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt
+       |ibique densis intersaepientes itinera praetenturis provincialium et viatorum opibus pascebantur.
+
+
+     ul
+       li#galerie
+            a(href="/") Galerie
+       li#billets
+            a(href="/publications") Publications
+       li#contacts Contacts
+
+
+  section#masonry
+     div.article-box
+        div.article-body
+            h4 Nouvelle exposition à Truc-Sur-Mer
+            hr
+            p
+                | Plusieurs variations de Lorem Ipsum peuvent être trouvées
+                | ci ou là, mais la majeure partie d’entre elles a été altérée par
+                | l’addition d’humour ou de mots aléatoires qui ne ressemblent
+                | pas une seconde à du texte standard. Si vous voulez utiliser un
+                | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                |  praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                | similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore..
+
+
+
+     div.article-box
+        div.image-box
+            img(id="logo" src="images/Pq13wQuW4f2NxiL5LVUZ.jpg")
+        div.article-body
+            h4 Hôtesse de l'air
+            hr
+            p
+              | Plusieurs variations de Lorem Ipsum peuvent être trouvées
+              | ci ou là, mais la majeure partie d’entre elles a été altérée par
+              | mais la majeure partie d’entre elles a été altérée par
+              | l’addition d’humour ou de mots aléatoires qui ne
+              | Lorem Ipsum sur Internet tendent à reproduire le même extrait sans
+              | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+              | totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+              | ce qui fait de lipsum.com le seul vrai générateur de Lorem Ipsum...
+
+
+     div.article-box
+        div.article-body
+            h4 Une nouveauté pour l'arrivée de l'automne
+            hr
+            p
+                | Plusieurs variations de Lorem Ipsum peuvent être trouvées
+                | ci ou là, mais la majeure partie d’entre elles a été altérée par
+                | l’addition d’humour ou de mots aléatoires qui ne ressemblent
+                | pas une seconde à du texte standard. Si vous voulez utiliser un
+                | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                |  praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                | similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore.
+
+
+
+block script
+    script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
+    script(src="javascripts/masonry-publications.js")
