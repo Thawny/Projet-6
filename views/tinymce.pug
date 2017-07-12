@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+    div.container
+        div.row
+            if titre
+                div.col-sm-12
+                    div.alert.alert-success #{titre}, #{corps}, #{filename}
+            div.col-sm-12
+                form(method='POST', action='/admin/formulaire-article', enctype='multipart/form-data')
+                    div.form-group
+                        label(for='titre') Titre :
+                        input.form-control(type='text', name='titre', placeholder='Titre')
+                    div.form-group
+                        label(for='corps') Contenu :
+                        textarea.form-control.tinymce(name='corps', placeholder='Corps' rows="10" cols="60")
+                    button.btn.btn-primary(type='submit') Enregistrer
+                    input(name="image", type="file", id="upload", onchange="")
+
+
+block script
+    script(src="https://cloud.tinymce.com/stable/tinymce.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.6.4/jquery.tinymce.min.js")
+    script(src="../javascripts/init-tinymce.js")

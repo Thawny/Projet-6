@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACP,WAAW,EAAE,KAAK;EAClB,MAAM,EAAE,eAAe",
+"sources": ["../scss/formulaire-article.scss"],
+"names": [],
+"file": "formulaire-article.css"
+}

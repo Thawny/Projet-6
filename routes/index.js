@@ -4,7 +4,7 @@ var Image = require('../models/Image');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Image.find({}).sort({addDate: 'descending'}).exec(function(err, images){
+  Image.find({}).populate('article').sort({addDate: 'descending'}).exec(function(err, images){
       res.render('index', {images: images});
   });
 });

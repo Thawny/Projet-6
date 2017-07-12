@@ -7,7 +7,7 @@
 }
 
 body {
-    height: 3000px;
+    // height: 3000px;
     #modal-dark {
         position: fixed;
         height: 101vh;
@@ -116,11 +116,27 @@ body {
             li:hover {
                 // background-color: rgba(255,255,255,1);
                 // color: black;
-                border-left: 1px solid orange;
             }
             #galerie {
                 // border-top: $borderNav;
+                a:hover {
+                    border-left: 2px solid orange;
+                    padding-left: 5px;
+                }
+
             }
+            // #galerie:hover:before {
+            //     content: "";
+            //     height: 20px;
+            //     width: 5px;
+            //     display: inline-block;
+            //     background-color: orange;
+            //     transform: translateY(5px);
+            //     transform: translateX(-5px);
+            // }
+            // #galerie:hover {
+            //     transform: translateX(5px);
+            // }
             #billets {
                 // border-top: $borderNav;
             }
@@ -177,7 +193,9 @@ body {
     }
     section {
         margin-left: 23%;
-        width: 76.4%;
+        width: 76.5%;
+        transform: translateY(-5px);
+
         // border: 1px solid black;
 
         .image-box {

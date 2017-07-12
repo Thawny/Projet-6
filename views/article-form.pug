@@ -1,0 +1,22 @@
+extends layout
+
+block style
+    link(rel='stylesheet', href='/css/formulaire-article.css')
+
+block content
+
+    div.container
+        div.row
+            if titre
+                div.col-sm-12
+                    div.alert.alert-success #{titre}, #{corps}
+            div.col-sm-12
+
+                form(method='POST', action='/admin/formulaire-article')
+                    div.form-group
+                        label(for='titre') Titre :
+                        input.form-control(type='text', name='titre', placeholder='Titre')
+                    div.form-group
+                        label(for='corps') Contenu :
+                        textarea.form-control(name='corps', placeholder='Corps' rows="10" cols="30")
+                    button.btn.btn-primary(type='submit') Enregistrer

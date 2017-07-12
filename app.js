@@ -9,7 +9,8 @@ var db = require('./db');
 var Article = require('./models/Article').model();
 var Image = require('./models/Image');
 
-var insertImage = require('./writeDB');
+// var bidule = require('./writeDB');
+// bidule.insert();
 // insertImage('La dame au turban', 'acrylique sur toile', 'LeiC0zDAktNHI0QvlSOC');
 
 
@@ -18,6 +19,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var publications = require('./routes/publications');
 var contacts = require('./routes/contacts');
+var admin = require('./routes/admin');
 
 var app = express();
 
@@ -38,6 +40,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/publications', publications);
 app.use('/contacts', contacts);
+app.use('/admin', admin);
 
 
 // catch 404 and forward to error handler
