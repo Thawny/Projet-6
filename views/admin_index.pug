@@ -1,0 +1,54 @@
+extends layout
+block style
+    link(rel='stylesheet', href='/css/index.css')
+
+block content
+
+  div#modal-dark
+  div#modal-image
+    img(id="modal" src="")
+    div#modal-meta
+        h2.text-center
+        h4.method.text-center
+        hr.title-line
+        p
+          | Procedente igitur mox tempore cum adventicium nihil inveniretur
+          | relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt
+          | ibique densis intersaepientes itinera praetenturis provincialium et viatorum opibus pascebantur...
+
+  aside
+    h1 Christian
+        br
+        | Louis
+        br
+        | Malto
+    h3 Peintre
+
+
+    p
+      |Procedente igitur mox tempore cum adventicium nihil inveniretur,
+      |relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt
+      |ibique densis intersaepientes itinera praetenturis provincialium et viatorum opibus pascebantur.
+
+
+    ul
+        li#galerie
+            a(href="/") Galerie
+        li#billets
+            a(href="/publications") Publications
+        li#contacts Contacts
+
+
+
+
+
+  section#masonry
+    each image in images
+        div.image-box
+            img(src='images/' + image.pathId +'.jpg' onclick="modalOn(this)" data-title=image.title data-method=image.meta)
+
+
+block script
+  script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
+  script(src="../javascripts/masonry.js")
+  script(src="../javascripts/modal.js")

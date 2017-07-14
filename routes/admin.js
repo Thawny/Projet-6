@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var multer = require('multer');
 var Article = require('../models/Article').model();
+const adminController = require('../controllers/adminControllers/adminController');
 
 /* MIDDELWARES */
 //multer object creation
@@ -17,9 +18,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-      res.send('TODO : créer template home admin');
-});
+router.get('/', adminController.adminHomePage);
 
 
 /* GET page formulaire d'ajout d'article. */
