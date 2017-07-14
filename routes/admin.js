@@ -28,10 +28,12 @@ router.get('/formulaire-article', function(req, res, next) {
 });
 
 /* POST page formulaire d'ajout d'article. */
-router.post('/formulaire-article', upload.single('image'), function(req, res, next) {
+router.post('/formulaire-article', upload.single('tableau'), function(req, res, next) {
       const titre = req.body.titre;
       const corps = req.body.corps;
-      const filename = req.file.filename;
+      if (req.file) {
+          const filename = req.file.filename;
+      }
     //   res.render('article', {titre: titre, corps: corps, filename: filename });
     var article = new Article({
         title: titre,
@@ -43,7 +45,7 @@ router.post('/formulaire-article', upload.single('image'), function(req, res, ne
 
 });
 
-router.get('/resultat', function(req, res, next) {
+router.get('/article', function(req, res, next) {
       const query = Article.findOne({'title': 'Anchorage'});
       query.exec(function(err, article) {
           var titre = article.title;

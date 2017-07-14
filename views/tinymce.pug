@@ -15,8 +15,12 @@ block content
                     div.form-group
                         label(for='corps') Contenu :
                         textarea.form-control.tinymce(name='corps', placeholder='Corps' rows="10" cols="60")
-                    button.btn.btn-primary(type='submit') Enregistrer
-                    input(name="image", type="file", id="upload", onchange="")
+                    div.form-group
+                        label(for='tableau') Associer un tableau :
+                        input.form-control(type='file', name='tableau')
+                    button.btn.btn-primary(type='submit',id='button') Enregistrer
+                    input(name="image", type="file", id="upload", onchange="",class="hidden")
+
 
 
 block script
