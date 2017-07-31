@@ -7,7 +7,6 @@ var ImageSchema = new Schema({
     meta: String,
     addDate: {type: Date, default: Date.now},
     pathId: String,
-    tableau: Boolean,
     article: {
         type: Schema.Types.ObjectId,
         ref: 'Article'

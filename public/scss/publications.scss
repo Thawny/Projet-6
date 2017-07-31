@@ -7,6 +7,27 @@
 }
 
 body {
+    #top {
+        // border: 5px solid $lightgray;
+        // border: 5px solid $lightgray;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: block;
+        z-index: 30000;
+        height: 5px;
+        width: 100vw;
+        background-color: $lightgray;
+    }
+    #bottom {
+        position: fixed;
+        left: 0;
+        top: 99.3vh;
+        background-color: $lightgray;
+        z-index: 3000;
+        height: 5px;
+        width: 100vw;
+    }
     font-family: 'Lato', sans-serif;
     background-color: $lightgray;
     padding: 5px;
@@ -132,6 +153,7 @@ body {
         // margin-left: 23%;
         // width: 76.4%;
         margin-left: 23.5%;
+        min-height: 101vh;
         width: 76.5%;
         transform: translateY(-4.5px);
         // border: 1px solid black;
@@ -161,6 +183,9 @@ body {
             .article-body {
                 padding: 3%;
                 // border: 1px solid blue;
+                a {
+                    text-decoration: none;
+                }
             }
         }
         .first {

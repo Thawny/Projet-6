@@ -2,6 +2,7 @@
 var modalBox;
 var maxBox;
 function modalOn(target) {
+    if ($(target).is('.forHover')) target = $(target).next();
     maxBox = maxBoxFactory();
     modalBox = modalBoxFactory(target);
 

@@ -6,6 +6,23 @@ body {
   background-color: #e4e4e4;
   padding: 5px;
   padding-right: 0; }
+  body #top {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: 30000;
+    height: 5px;
+    width: 100vw;
+    background-color: #e4e4e4; }
+  body #bottom {
+    position: fixed;
+    left: 0;
+    top: 99.3vh;
+    background-color: #e4e4e4;
+    z-index: 3000;
+    height: 5px;
+    width: 100vw; }
   body aside {
     height: 99.2vh;
     width: 23%;
@@ -90,6 +107,7 @@ body {
       background-position: 50% bottom; }
   body section {
     margin-left: 23.5%;
+    min-height: 101vh;
     width: 76.5%;
     transform: translateY(-4.5px); }
     body section .article-box {
@@ -109,6 +127,8 @@ body {
         margin-top: 3%; }
       body section .article-box .article-body {
         padding: 3%; }
+        body section .article-box .article-body a {
+          text-decoration: none; }
     body section .first {
       margin-top: 0 !important; }
     body section .second {

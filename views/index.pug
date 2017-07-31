@@ -4,6 +4,11 @@ block style
 
 block content
 
+  div#abs
+
+  div#bottom
+  div#top
+
   div#modal-dark
   div#modal-image
     img(id="modal" src="")
@@ -35,17 +40,19 @@ block content
         li#galerie
             a(href="/") Galerie
         li#billets
-            a(href="/publications") Publications
+            a(href="/publications") Actualités
         li#contacts Contacts
 
-
-
+    div#social-icons.text-center
+        div#fb
+        div#pinterest
+        div#blogger
 
 
   section#masonry
     each image in images
         div.image-box
-            img(src='images/' + image.pathId +'.jpg' onclick="modalOn(this)" data-title=image.title data-method=image.meta)
+            img(class="tableau" src='uploads/' + image.pathId onclick="modalOn(this)" data-title=image.title data-method=image.meta)
 
 
 block script

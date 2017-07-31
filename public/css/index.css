@@ -6,6 +6,23 @@ body {
   background-color: #e4e4e4;
   padding: 5px;
   padding-right: 0; }
+  body #top {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: 30000;
+    height: 5px;
+    width: 100vw;
+    background-color: #e4e4e4; }
+  body #bottom {
+    position: fixed;
+    left: 0;
+    top: 99.3vh;
+    background-color: #e4e4e4;
+    z-index: 3000;
+    height: 5px;
+    width: 100vw; }
   body #modal-dark {
     position: fixed;
     height: 101vh;
@@ -84,13 +101,20 @@ body {
       body aside ul #galerie a:hover {
         border-left: 2px solid orange;
         padding-left: 5px; }
+    body aside #social-icons {
+      position: absolute;
+      justify-content: space-between;
+      padding-left: 30px;
+      padding-right: 30px;
+      display: flex;
+      width: 100%;
+      bottom: 20px; }
     body aside #fb {
       background: url("../images/fb3.png") no-repeat;
       width: 50px;
       height: 50px;
       background-size: 100%;
       margin-left: 0px;
-      margin-top: 40px;
       background-position: 50% top;
       transition: background-position 0.2s;
       display: inline-block; }
@@ -103,7 +127,6 @@ body {
       height: 50px;
       background-size: 100%;
       margin-left: 20px;
-      margin-top: 40px;
       background-position: 50% top;
       transition: background-position 0.2s; }
     body aside #pinterest:hover {
@@ -115,7 +138,6 @@ body {
       height: 50px;
       background-size: 100%;
       margin-left: 20px;
-      margin-top: 40px;
       background-position: 50% top;
       transition: background-position 0.2s; }
     body aside #blogger:hover {
@@ -123,15 +145,18 @@ body {
   body section {
     margin-left: 23%;
     width: 76.5%;
-    transform: translateY(-5px); }
+    transform: translateY(-5px);
+    min-height: 101vh; }
     body section .image-box {
       width: 50%;
       margin-top: 5px;
       padding-left: 6px;
       cursor: pointer;
       float: left; }
-      body section .image-box img {
+      body section .image-box img.tableau {
         width: 100%; }
+        body section .image-box img.tableau:hover {
+          background: rgba(0, 0, 0, 0.7); }
     body section .first {
       margin-top: 0 !important; }
     body section .second {

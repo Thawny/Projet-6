@@ -1,0 +1,57 @@
+#masonry {
+  width: 71.5%; }
+
+#barre {
+  width: 4.7%;
+  height: 99.2vh;
+  background-color: #444444;
+  position: fixed;
+  z-index: 90000000;
+  left: 94.9%;
+  display: block !important;
+  border-bottom: 4px solid #e4e4e4; }
+  #barre ul {
+    display: initial; }
+  #barre hr {
+    background-color: #B6B6B6;
+    color: #B6B6B6;
+    border-color: #B6B6B6;
+    width: 60%;
+    margin-top: 15%; }
+  #barre .icone-admin {
+    height: 48px;
+    width: 100% !important;
+    list-style: none;
+    cursor: pointer; }
+    #barre .icone-admin img {
+      width: 47%; }
+  #barre #door-icon-li #door-icon {
+    margin-left: 27%; }
+  #barre .canvas-icon-li img {
+    margin-top: 7px; }
+  #barre .canvas-icon-li #canvas-icon {
+    width: 60%;
+    margin-left: 18%; }
+  #barre .pen-icon-li {
+    margin-top: 10px;
+    border-left: 4px solid #14a0cc;
+    background-color: #5F5E5E; }
+    #barre .pen-icon-li #pen-icon {
+      width: 40%;
+      margin-left: 30%;
+      margin-top: 13px; }
+  #barre #letter-icon-li {
+    margin-top: 10px; }
+    #barre #letter-icon-li #letter-icon {
+      margin-left: 27%; }
+  #barre #plus-icon-li img {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 15%; }
+
+.articleAction a {
+  text-decoration: none; }
+.articleAction .supprArticle {
+  margin-left: 20px; }
+
+/*# sourceMappingURL=adminPublications.css.map */

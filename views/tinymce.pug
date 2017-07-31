@@ -1,6 +1,13 @@
 extends layout
+block style
+    link(rel="stylesheet" href="/css/articleForm.css")
 
 block content
+
+    if article
+        - body = article.body
+    else
+        - body = ""
 
     div.container
         div.row
@@ -8,17 +15,28 @@ block content
                 div.col-sm-12
                     div.alert.alert-success #{titre}, #{corps}, #{filename}
             div.col-sm-12
-                form(method='POST', action='/admin/formulaire-article', enctype='multipart/form-data')
+                form(method='POST', action='/admin/nouvel-article', enctype='multipart/form-data')
                     div.form-group
                         label(for='titre') Titre :
                         input.form-control(type='text', name='titre', placeholder='Titre')
                     div.form-group
                         label(for='corps') Contenu :
-                        textarea.form-control.tinymce(name='corps', placeholder='Corps' rows="10" cols="60")
+                        textarea.form-control.tinymce(name='corps', placeholder='Corps' rows="10" cols="60") #{body}
                     div.form-group
-                        label(for='tableau') Associer un tableau :
+                        label(for='titre-tableau') Titre du tableau
+                        input.form-control(type="text" name="titreTableau" placeholder="Titre du tableau")
+                    div.form-group
+                        label(for='technique-tableau') Technique / dimensions
+                        input.form-control(type="text" name="techniqueTableau" placeholder="technique / dimensions")
+                    div.form-group
+                        label(for='tableau') Tableau associé :
                         input.form-control(type='file', name='tableau')
-                    button.btn.btn-primary(type='submit',id='button') Enregistrer
+                    div.form-group
+                        label(for="illustration") Illustration pour l'article
+                        input.form-control(type='file' name='illustration')
+                    div.button-group
+                        button.btn.btn-primary(id="cancel-button") Annuler
+                        button.btn.btn-primary(type='submit',id='button') Enregistrer
                     input(name="image", type="file", id="upload", onchange="",class="hidden")
 
 
@@ -26,4 +44,4 @@ block content
 block script
     script(src="https://cloud.tinymce.com/stable/tinymce.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.6.4/jquery.tinymce.min.js")
-    script(src="../javascripts/init-tinymce.js")
+    script(src= path + "/javascripts/init-tinymce.js")

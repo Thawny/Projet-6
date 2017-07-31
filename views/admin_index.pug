@@ -1,8 +1,30 @@
 extends layout
 block style
     link(rel='stylesheet', href='/css/index.css')
+    link(rel='stylesheet', href='/css/admin.css')
+
 
 block content
+
+  div#barre
+    ul
+        li.icone-admin(id="door-icon-li")
+            img(src="images/door.png" id="door-icon")
+        li.icone-admin.canvas-icon-li
+            img(src="images/canvas.png" id="canvas-icon")
+        li.icone-admin.pen-icon-li
+            a(href='/admin/publications')
+                img(src="images/edit-2.png" id="pen-icon")
+        li.icone-admin#letter-icon-li
+            img(src="images/contact.png" id="letter-icon")
+        hr
+        li.icone-admin#plus-icon-li
+            img(id="plus-icon" src="images/plus.png")
+
+
+  div#bottom
+  div#top
+
 
   div#modal-dark
   div#modal-image
@@ -35,20 +57,45 @@ block content
         li#galerie
             a(href="/") Galerie
         li#billets
-            a(href="/publications") Publications
+            a(href="/publications") Actualités
         li#contacts Contacts
 
-
-
+    div#social-icons.text-center
+        div#fb
+        div#pinterest
+        div#blogger
 
 
   section#masonry
     each image in images
         div.image-box
-            img(src='images/' + image.pathId +'.jpg' onclick="modalOn(this)" data-title=image.title data-method=image.meta)
+            div(onClick="modalOn(this)").forHover
+            img(class="tableau" src='uploads/' + image.pathId onclick="modalOn(this)" data-title=image.title data-method=image.meta)
+            div.circle
+                a(href="admin/delete/"+ image._id + "/" + image.pathId)
+                    img(class="trash" src="images/trash.png")
+
+
+  div#newCanvasForm
+        row
+            div.col-sm-12.text-center Nouvelle image
+            div.col-sm-12
+                form(method='POST' action='admin/nouveau-tableau' enctype="multipart/form-data")
+                    div.form-group
+                        label(for='titre') Titre :
+                        input.form-control(type='text', name='titre', placeholder='Titre')
+                    div.form-group
+                        label(for='technique') Technique / dimensions :
+                        input.form-control(type="text" name='technique', placeholder='technique')
+                    div.form-group
+                        label(for="tableau") Sélectionner un fichier :
+                        input(type="file" name="tableau")
+                    div.form-group
+                        button.btn.btn-primary(type='submit') Enregistrer
 
 
 block script
   script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
   script(src="../javascripts/masonry.js")
   script(src="../javascripts/modal.js")
+  script(src="../javascripts/admin_index.js")

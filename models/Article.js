@@ -6,6 +6,7 @@ var ArticleSchema = new Schema({
     title: String,
     body: String,
     addDate : {type: Date, default: Date.now},
+    cover: String,
     image : {type: Schema.Types.ObjectId, ref: 'Image'}
 });
 

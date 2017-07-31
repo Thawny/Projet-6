@@ -1,9 +1,28 @@
 extends layout
 block style
     link(rel='stylesheet', href='/css/publications.css')
+    link(rel='stylesheet', href='/css/adminPublications.css')
 
 block content
 
+  div#bottom
+  div#top
+
+  div#barre
+    ul
+        li.icone-admin(id="door-icon-li")
+            img(src="../images/door.png" id="door-icon")
+        li.icone-admin.canvas-icon-li
+            a(href='/admin')
+                img(src="../images/canvas.png" id="canvas-icon")
+        li.icone-admin.pen-icon-li
+            img(src="../images/edit-2.png" id="pen-icon")
+        li.icone-admin#letter-icon-li
+            img(src="../images/contact.png" id="letter-icon")
+        hr
+        li.icone-admin#plus-icon-li
+            a(href='/admin/nouvel-article')
+                img(id="plus-icon" src="../images/plus.png")
 
   aside
      h1 Christian
@@ -28,10 +47,6 @@ block content
        li#contacts Contacts
 
 
-
-
-
-
   section#masonry
      div.article-box
         div.article-body
@@ -45,12 +60,12 @@ block content
                 | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                 |  praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
                 | similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore..
-            div lire la suite
+
 
 
      div.article-box
         div.image-box
-            img(id="logo" src="images/Pq13wQuW4f2NxiL5LVUZ.jpg")
+            img(id="logo" src="../images/Pq13wQuW4f2NxiL5LVUZ.jpg")
         div.article-body
             h4 Hôtesse de l'air
             hr
@@ -63,7 +78,6 @@ block content
               | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
               | totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
               | ce qui fait de lipsum.com le seul vrai générateur de Lorem Ipsum...
-            div lire la suite
 
 
      div.article-box
@@ -78,25 +92,22 @@ block content
                 | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                 |  praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
                 | similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore.
-            div lire la suite
 
 
-     - var colors = ['#C6B976', '#769EC6', '#76C6A1']
-     - var index = 0
      each article in articles
         div.article-box
           div.article-body
             h4 #{article.title}
             hr
-            p  #{article.body}...
-            div
-                a(href='/publications/' + article._id, style="color:" + colors[index] + ' !important') lire la suite
-            if index == 2
-                - index = 0
-            else
-                - index = index + 1
+            p  #{article.body}
+            div.articleAction
+                span
+                    a(href='/admin/edit/' + article._id) éditer l'article
+                span.supprArticle
+                    a(href='/admin/publications/delete/' + article._id) supprimer l'article
+
 
 
 block script
     script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
-    script(src="javascripts/masonry-publications.js")
+    script(src="../javascripts/masonry-publications.js")

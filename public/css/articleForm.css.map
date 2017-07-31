@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc;EAEV,UAAU,EAAE,IAAI;EAChB,oBAAO;IACH,YAAY,EAAE,IAAI",
+"sources": ["../scss/articleForm.scss"],
+"names": [],
+"file": "articleForm.css"
+}

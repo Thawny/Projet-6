@@ -12,9 +12,8 @@ exports.toutesLesPublications = function(req, res) {
 }
 
 exports.publicationIndividuelle = function(req, res) {
-    const id = req.params.id;
-    // TODO: VÉRIFIER S'IL Y A UN TABLEAU ASSOCIÉ ET LE CHERCHER S'IL EXISTE
-    const query = Article.findOne({'title': id});
+    const _id = req.params.id;
+    const query = Article.findOne({'_id': _id});
     query.exec(function(err, article) {
         res.render('article', {article: article});
     });

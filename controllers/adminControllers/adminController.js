@@ -1,23 +1,16 @@
-var multer = require('multer');
 const Image = require('../../models/Image');
 const Article = require('../../models/Article').model();
+const randomId = require('random-id');
+const path = require('path');
+const fs = require('fs');
+
 
 /* MIDDELWARES */
-//multer object creation
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, './public/uploads')
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.originalname)
-  }
-})
-
-var upload = multer({ storage: storage })
-
 exports.checkAdminPrivileges = function(req, res) {
     //TODO: check admin privileges
 }
+/*END MIDDELWARES*/
+
 
 /* GET admin home page. */
 exports.adminHomePage = function(req, res) {
@@ -26,38 +19,29 @@ exports.adminHomePage = function(req, res) {
     });
 }
 
+exports.newCanvas_post = function(req, res, next) {
+    const titre = req.body.titre;
+    const technique = req.body.technique;
+    const filename = req.file.filename;
 
-// /* GET page formulaire d'ajout d'article. */
-// router.get('/formulaire-article', function(req, res, next) {
-//       res.render('tinymce');
-// });
-//
-// /* POST page formulaire d'ajout d'article. */
-// router.post('/formulaire-article', upload.single('tableau'), function(req, res, next) {
-//       const titre = req.body.titre;
-//       const corps = req.body.corps;
-//       if (req.file) {
-//           const filename = req.file.filename;
-//       }
-//     //   res.render('article', {titre: titre, corps: corps, filename: filename });
-//     var article = new Article({
-//         title: titre,
-//         body: corps
-//     });
-//     article.save();
-//     res.send("OK");
-//
-//
-// });
-//
-// router.get('/article', function(req, res, next) {
-//       const query = Article.findOne({'title': 'Anchorage'});
-//       query.exec(function(err, article) {
-//           var titre = article.title;
-//           var corps = article.body;
-//           res.render('article', {titre: titre, corps: corps});
-//       });
-// });
-//
-//
-// module.exports = router;
+    //   res.render('article', {titre: titre, corps: corps, filename: filename });
+    var nouvelleImage= new Image({
+      title: titre,
+      meta: technique,
+      pathId: filename
+    });
+    nouvelleImage.save();
+    res.redirect('/admin');
+}
+
+exports.deleteCanvas = function(req, res, next) {
+    const _id = req.params.id;
+    const pathId = req.params.pathId;
+    const relPath = '../../public/uploads/' + pathId;
+    Image.findOne({'_id': _id}).remove(
+        function() {
+            fs.unlink(path.join(__dirname, relPath))
+            res.redirect('/admin');
+        }
+    );
+}
