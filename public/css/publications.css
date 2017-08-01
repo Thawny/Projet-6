@@ -127,8 +127,18 @@ body {
         margin-top: 3%; }
       body section .article-box .article-body {
         padding: 3%; }
-        body section .article-box .article-body a {
-          text-decoration: none; }
+        body section .article-box .article-body .controls {
+          width: 100%;
+          position: relative; }
+          body section .article-box .article-body .controls a {
+            text-decoration: none;
+            display: inline; }
+          body section .article-box .article-body .controls .date {
+            font-weight: lighter;
+            color: #8c8d8d;
+            display: inline;
+            position: absolute;
+            right: 0; }
     body section .first {
       margin-top: 0 !important; }
     body section .second {

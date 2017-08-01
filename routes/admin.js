@@ -3,6 +3,7 @@ var router = express.Router();
 var Article = require('../models/Article').model();
 const adminController = require('../controllers/adminControllers/adminController');
 const adminPublicationsController = require('../controllers/adminControllers/adminPublicationsController');
+const adminMessagesController = require('../controllers/adminControllers/adminMessagesController');
 
 
 /* GET page principale admin. */
@@ -27,5 +28,7 @@ router.get('/edit/:id', adminPublicationsController.editArticle_get);
 router.get('/publications/delete/:id', adminPublicationsController.deleteArticle);
 
 router.get('/delete/:id/:pathId', adminController.deleteCanvas);
+
+router.get('/messages', adminMessagesController.messagesPage);
 
 module.exports = router;

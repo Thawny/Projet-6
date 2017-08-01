@@ -24,8 +24,10 @@ block content
        li#galerie
             a(href="/") Galerie
        li#billets
-            a(href="/publications") Publications
-       li#contacts Contacts
+            a(href="/publications") Actualité
+       li#contacts
+            a(href="/contacts") Contacts
+
 
 
 
@@ -81,20 +83,25 @@ block content
             div lire la suite
 
 
-     - var colors = ['#C6B976', '#769EC6', '#76C6A1']
+     - var colors = ['#769EC6', '#769EC6', '#769EC6']
      - var index = 0
      each article in articles
         div.article-box
+          if article.cover
+             div.image-box
+                img(id="logo" src='uploads/' + article.cover)
           div.article-body
             h4 #{article.title}
             hr
             p  #{article.body}...
-            div
+            div.controls
                 a(href='/publications/' + article._id, style="color:" + colors[index] + ' !important') lire la suite
+                span.date #{article.addDate.toLocaleDateString()}
             if index == 2
                 - index = 0
             else
                 - index = index + 1
+
 
 
 block script

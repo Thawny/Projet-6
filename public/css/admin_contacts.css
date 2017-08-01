@@ -1,0 +1,70 @@
+body {
+  color: #727374; }
+
+#barre {
+  width: 4.7%;
+  height: 99.2vh;
+  background-color: #444444;
+  position: fixed;
+  left: 94.9%;
+  display: block !important;
+  border-bottom: 4px solid #e4e4e4; }
+  #barre ul {
+    display: initial; }
+  #barre hr {
+    background-color: #B6B6B6;
+    color: #B6B6B6;
+    border-color: #B6B6B6;
+    width: 60%;
+    margin-top: 15%; }
+  #barre .icone-admin {
+    height: 48px;
+    width: 100% !important;
+    list-style: none;
+    cursor: pointer; }
+    #barre .icone-admin img {
+      width: 47%; }
+  #barre #door-icon-li #door-icon {
+    margin-left: 27%; }
+  #barre .canvas-icon-li {
+    border-left: 4px solid #14a0cc;
+    background-color: #5F5E5E; }
+    #barre .canvas-icon-li img {
+      margin-top: 7px; }
+    #barre .canvas-icon-li #canvas-icon {
+      width: 60%;
+      margin-left: 18%; }
+  #barre .pen-icon-li {
+    margin-top: 10px; }
+    #barre .pen-icon-li #pen-icon {
+      width: 40%;
+      margin-left: 30%;
+      margin-top: 10px; }
+  #barre #letter-icon-li {
+    margin-top: 10px; }
+    #barre #letter-icon-li #letter-icon {
+      margin-left: 27%; }
+  #barre #plus-icon-li img {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 15%; }
+
+div#messageContainer {
+  width: 94.3%; }
+  div#messageContainer div.messageBlock {
+    border: 1px solid white;
+    background-color: white;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px; }
+    div#messageContainer div.messageBlock .courriel {
+      font-weight: bold; }
+    div#messageContainer div.messageBlock .separator {
+      margin-right: 5px;
+      margin-left: 5px; }
+    div#messageContainer div.messageBlock hr {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+
+/*# sourceMappingURL=admin_contacts.css.map */

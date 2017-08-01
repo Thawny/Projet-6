@@ -1,0 +1,108 @@
+body {
+    color: #727374;
+}
+#barre {
+    width: 4.7%;
+    height: 99.2vh;
+    background-color: #444444;
+    position: fixed;
+    left: 94.9%;
+    display: block !important;
+    border-bottom: 4px solid #e4e4e4;
+    ul {
+        display: initial;
+    }
+    hr {
+    background-color: #B6B6B6;
+    color: #B6B6B6;
+    border-color: #B6B6B6;
+    width: 60%;
+    margin-top: 15%;
+    }
+    .icone-admin {
+        // border: 1px solid pink;
+        height: 48px;
+        // width: 54px;
+        width: 100% !important;
+        list-style: none;
+        cursor: pointer;
+        // right: 40px;
+        img {
+            width: 47%;
+            // border: 1px solid blue;
+            // margin-top: 10px;
+            // margin-left: 13px;
+        }
+     }
+    #door-icon-li {
+        #door-icon {
+            // margin-left: 15px;
+            margin-left: 27%;
+        }
+    }
+    .canvas-icon-li {
+        border-left: 4px solid #14a0cc;
+        // box-sizing: border-box;
+        background-color: #5F5E5E;
+        img {
+            margin-top: 7px;
+        }
+        #canvas-icon{
+            width: 60%;
+            // margin-left: 9px;
+            margin-left: 18%;
+        }
+    }
+    .pen-icon-li {
+        margin-top: 10px;
+        #pen-icon {
+            width: 40%;
+            // margin-left: 17px;
+            margin-left: 30%;
+            margin-top: 10px;
+        }
+    }
+    #letter-icon-li {
+        margin-top: 10px;
+        #letter-icon {
+            // margin-left: 16px;
+            margin-left: 27%;
+        }
+    }
+    #plus-icon-li {
+        // border: 1px solid pink;
+        img {
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 15%;
+        }
+    }
+}
+
+div#messageContainer {
+    // background-color: white;
+    width: 94.3%;
+    // height: 300px;
+    div.messageBlock {
+        border: 1px solid white;
+        background-color: white;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 10px;
+        .courriel {
+            font-weight: bold;
+        }
+        .separator {
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        .date {
+            // margin-left: 10px;
+        }
+        hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}

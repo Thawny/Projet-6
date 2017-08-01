@@ -183,9 +183,22 @@ body {
             .article-body {
                 padding: 3%;
                 // border: 1px solid blue;
-                a {
-                    text-decoration: none;
+                .controls {
+                    width: 100%;
+                    position: relative;
+                    a {
+                        text-decoration: none;
+                        display: inline;
+                    }
+                    .date {
+                        font-weight: lighter;
+                        color: lighten(#727374, 10%);
+                        display: inline;
+                        position: absolute;
+                        right: 0;
+                    }
                 }
+
             }
         }
         .first {

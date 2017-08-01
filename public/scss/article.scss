@@ -1,9 +1,43 @@
-.article-box {
-    width: 100% !important;
+@import 'var';
+#top {
+    // border: 5px solid $lightgray;
+    // border: 5px solid $lightgray;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: 30000;
+    height: 5px;
+    width: 100vw;
+    background-color: $lightgray;
 }
-.border {
-    border: 0.5px solid black;
+#bottom {
+    position: fixed;
+    left: 0;
+    top: 99.3vh;
+    background-color: $lightgray;
+    z-index: 3000;
+    height: 5px;
+    width: 100vw;
 }
-#text {
-    background-color: yellow;
+section {
+    width: 76.3% !important;
+    margin-left: 23.7% !important;
+    .article-box {
+        width: 100% !important;
+        h3 {
+            margin-top: 0;
+        }
+        hr {
+            border-top: 0.8px solid #727374;
+            // border-color: darken(#eee, 20%);
+        }
+        img {
+            width: auto !important;
+        }
+    }
+    .border {
+        border: 0.5px solid black;
+    }
+
 }

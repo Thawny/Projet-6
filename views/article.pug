@@ -6,6 +6,8 @@ block style
 
 block content
 
+  div#bottom
+  div#top
 
   aside
      h1 Christian
@@ -36,7 +38,9 @@ block content
 
   section#masonry
      div.article-box
+        div.article-body
             h3 #{article.title}
+            hr
             p#text !{article.body}
 
 
