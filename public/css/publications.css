@@ -106,15 +106,15 @@ body {
     body aside #blogger:hover {
       background-position: 50% bottom; }
   body section {
-    margin-left: 23.5%;
+    margin-left: calc(23% + 1px);
     min-height: 101vh;
     width: 76.5%;
-    transform: translateY(-4.5px); }
+    transform: translateY(-6px); }
     body section .article-box {
-      width: 50%;
-      border-right: 5px solid #e4e4e4;
-      border-bottom: 1.1px solid #e4e4e4;
-      margin-top: 5px;
+      width: calc(50% - 6px);
+      border: 1px solid #d5d5d5;
+      margin-top: 6px;
+      margin-left: 6px;
       cursor: pointer;
       float: left;
       background-color: white;

@@ -23,16 +23,17 @@ block content
                         label(for='corps') Contenu :
                         textarea.form-control.tinymce(name='corps', placeholder='Corps' rows="10" cols="60") #{body}
                     div.form-group
+                        label(for='tableau') Associer un tableau :
+                        input.form-control(type='file', name='tableau')    
+                    div.form-group
                         label(for='titre-tableau') Titre du tableau
                         input.form-control(type="text" name="titreTableau" placeholder="Titre du tableau")
                     div.form-group
                         label(for='technique-tableau') Technique / dimensions
                         input.form-control(type="text" name="techniqueTableau" placeholder="technique / dimensions")
+
                     div.form-group
-                        label(for='tableau') Tableau associé :
-                        input.form-control(type='file', name='tableau')
-                    div.form-group
-                        label(for="illustration") Illustration pour l'article
+                        label(for="illustration") Ajouter un image de couverture
                         input.form-control(type='file' name='illustration')
                     div.button-group
                         button.btn.btn-primary(id="cancel-button") Annuler

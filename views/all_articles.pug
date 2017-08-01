@@ -4,6 +4,8 @@ block style
 
 block content
 
+  div#bottom
+  div#top
 
   aside
      h1 Christian
@@ -26,7 +28,7 @@ block content
        li#billets
             a(href="/publications") Actualité
        li#contacts
-            a(href="/contacts") Contacts
+            a(href="/contacts") Me contacter
 
 
 
@@ -86,21 +88,22 @@ block content
      - var colors = ['#769EC6', '#769EC6', '#769EC6']
      - var index = 0
      each article in articles
-        div.article-box
-          if article.cover
-             div.image-box
-                img(id="logo" src='uploads/' + article.cover)
-          div.article-body
-            h4 #{article.title}
-            hr
-            p  #{article.body}...
-            div.controls
-                a(href='/publications/' + article._id, style="color:" + colors[index] + ' !important') lire la suite
-                span.date #{article.addDate.toLocaleDateString()}
-            if index == 2
-                - index = 0
-            else
-                - index = index + 1
+       div.article-container
+          div.article-box
+            if article.cover
+                div.image-box
+                    img(id="logo" src='uploads/' + article.cover)
+            div.article-body
+                h4 #{article.title}
+                hr
+                p  #{article.body}...
+                div.controls
+                    a(href='/publications/' + article._id, style="color:" + colors[index] + ' !important') lire la suite
+                    span.date #{article.addDate.toLocaleDateString()}
+                if index == 2
+                    - index = 0
+                else
+                    - index = index + 1
 
 
 
