@@ -21,7 +21,8 @@ section {
   width: 76.3% !important;
   margin-left: 23.7% !important; }
   section .article-box {
-    width: 100% !important; }
+    width: 100% !important;
+    margin-left: 0 !important; }
     section .article-box h3 {
       margin-top: 0; }
     section .article-box hr {

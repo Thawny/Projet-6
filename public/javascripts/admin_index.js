@@ -37,13 +37,16 @@ $plusIcon.click(function() {
 });
 
 
-// $('.trash').hover(
-//     function(){
-//         // $(this).css('transform', 'scale(2)');
-//         $(this).toggleClass('grow');
-//     },
-//     function(){
-//         // $(this).css('transform', 'scale(1)');
-//         $(this).toggleClass('grow');
-//     }
-// )
+$('.circle').hover(
+    function(){
+        // $(this).css('transform', 'scale(2)');
+        $(this).toggleClass('grow');
+        // $(this).animate({height: "120px", width: "120px"}, 1000);
+    },
+    function(){
+        // $(this).css('transform', 'scale(1)');
+        $(this).toggleClass('grow');
+        // $(this).animate({height: "60px", width: "60px !important"}, 1000);
+
+    }
+)

@@ -3,6 +3,7 @@ body {
 }
 #barre {
     width: 4.7%;
+    min-width: 4.7% !important;
     height: 99.2vh;
     background-color: #444444;
     position: fixed;
@@ -36,20 +37,15 @@ body {
      }
     #door-icon-li {
         #door-icon {
-            // margin-left: 15px;
             margin-left: 27%;
         }
     }
     .canvas-icon-li {
-        border-left: 4px solid #14a0cc;
-        // box-sizing: border-box;
-        background-color: #5F5E5E;
         img {
             margin-top: 7px;
         }
         #canvas-icon{
             width: 60%;
-            // margin-left: 9px;
             margin-left: 18%;
         }
     }
@@ -57,20 +53,20 @@ body {
         margin-top: 10px;
         #pen-icon {
             width: 40%;
-            // margin-left: 17px;
             margin-left: 30%;
             margin-top: 10px;
         }
     }
     #letter-icon-li {
         margin-top: 10px;
+        border-left: 4px solid #14a0cc;
+        background-color: #5F5E5E;
         #letter-icon {
-            // margin-left: 16px;
             margin-left: 27%;
+            margin-top: 10px;
         }
     }
     #plus-icon-li {
-        // border: 1px solid pink;
         img {
             width: 50%;
             margin-left: 25%;
@@ -80,16 +76,14 @@ body {
 }
 
 div#messageContainer {
-    // background-color: white;
     width: 94.3%;
-    // height: 300px;
     div.messageBlock {
-        border: 1px solid white;
+        border: 1px solid darken(#eee, 10%);
         background-color: white;
         width: 100%;
         padding-left: 10px;
         padding-right: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 7px;
         .courriel {
             font-weight: bold;
         }
@@ -104,5 +98,22 @@ div#messageContainer {
             margin-top: 10px;
             margin-bottom: 10px;
         }
+        p {
+            margin: 0 0 3px;
+        }
+        .supprimer {
+            display: inline-block;
+            margin-bottom: 7px;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    .no-message {
+        font-size: 1.8em;
+        height: 100%;
+        width: 100%;
+        // border: 1px solid blue;
+        padding-top: 40vh;
     }
 }

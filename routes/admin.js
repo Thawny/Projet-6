@@ -31,4 +31,7 @@ router.get('/delete/:id/:pathId', adminController.deleteCanvas);
 
 router.get('/messages', adminMessagesController.messagesPage);
 
+router.get('/messages/delete/:id', adminMessagesController.deleteMessage);
+
+
 module.exports = router;

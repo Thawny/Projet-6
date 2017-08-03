@@ -92,14 +92,16 @@
   top: 40%;
   left: 43%;
   visibility: hidden;
+  transition: transform 0.4s;
   transform: scale(1); }
   .circle .trash {
     width: 70%;
     position: relative;
     top: 15%;
     left: 15%; }
-  .circle .grow {
-    transform: scale(1.5); }
+
+.grow {
+  transform: scale(1.5); }
 
 .visible {
   visibility: visible !important; }

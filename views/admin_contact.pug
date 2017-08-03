@@ -9,7 +9,8 @@ block content
             li.icone-admin(id="door-icon-li")
                 img(src="../images/door.png" id="door-icon")
             li.icone-admin.canvas-icon-li
-                img(src="../images/canvas.png" id="canvas-icon")
+                a(href='/admin')
+                    img(src="../images/canvas.png" id="canvas-icon")
             li.icone-admin.pen-icon-li
                 a(href='/admin/publications')
                     img(src="../images/edit-2.png" id="pen-icon")
@@ -18,18 +19,17 @@ block content
 
 
     div#messageContainer
-        div.messageBlock
-            h5
-                span.courriel truc@gmail.com
-                span.separator /
-                span.date 2017-10-12
-            hr
-            p | Lorem ipsum dolor sit amet and whatever it doesn't matter ic hfr jshxjh hgh hhjkg.
-
-        div.messageBlock
-            h5
-                span.courriel truc@gmail.com
-                span.separator /
-                span.date 2017-10-12
-            hr
-            p | On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum.
+        if messages.length != 0
+            each message in messages
+                div.messageBlock
+                    h5
+                        span.courriel #{message.courriel}
+                        span.separator /
+                        span.date #{message.date.toLocaleDateString()}
+                    hr
+                    p   #{message.body}
+                    span.supprimer
+                        a(href='/admin/messages/delete/' + message._id) supprimer
+        else
+            div.no-message.text-center
+                p Vous n'avez aucun message
