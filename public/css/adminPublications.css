@@ -44,6 +44,10 @@
     margin-top: 10px; }
     #barre #letter-icon-li #letter-icon {
       margin-left: 27%; }
+  #barre #users-icon-li {
+    margin-top: 0px; }
+    #barre #users-icon-li #letter-icon {
+      margin-left: 27%; }
   #barre #plus-icon-li img {
     width: 50%;
     margin-left: 25%;

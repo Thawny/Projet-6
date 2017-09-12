@@ -9,19 +9,26 @@
     "startall": "parallelshell 'mongod --dbpath /Users/TonyMalto/Documents/EXPRESS/Christian/data' 'sass --watch public/scss:public/css' 'nodemon ./bin/www' "
   },
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "~1.17.1",
     "cheerio": "^1.0.0-rc.2",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
+    "express-session": "^1.15.5",
+    "helmet": "^3.8.1",
     "mongoose": "^4.10.5",
     "morgan": "~1.8.1",
     "multer": "^1.3.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
     "pug": "~2.0.0-beta11",
     "random-id": "0.0.2",
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
+    "express-validator": "^3.2.1",
     "nodemon": "^1.11.0",
     "parallelshell": "^3.0.1"
   }

@@ -1,16 +1,6 @@
 body {
     color: #727374;
 }
-#modal-dark {
-    position: fixed;
-    height: 101vh;
-    width: 105vw;
-    background-color: blue;
-    z-index: 100;
-    margin: -10px;
-    background-color: rgba(0,0,0,0.7);
-    display: none;
-}
 #barre {
     width: 4.7%;
     min-width: 4.7% !important;
@@ -132,36 +122,5 @@ div#messageContainer {
         width: 100%;
         // border: 1px solid blue;
         padding-top: 40vh;
-    }
-}
-
-#newCanvasForm {
-    position: fixed;
-    background-color: white;
-    top: 25vh;
-    // left: 20vw;
-    width: 60vw;
-    height: 340px;
-    z-index: 9000000000000;
-    box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
-    border-radius: 4px;
-    visibility: hidden;
-    opacity: 0;
-    // display: none;
-    form {
-        // border: 1px solid red;
-        margin-top: 10px;
-
-    }
-    .text-center {
-        // border: 1px solid black;
-        font-weight: bold;
-        height: 8vh;
-        padding-top: 10px;
-        box-sizing: border-box;
-        vertical-align: middle;
-    }
-    button {
-        margin-top: 5px;
     }
 }

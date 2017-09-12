@@ -1,0 +1,48 @@
+extends layout
+
+block style
+    link(rel='stylesheet', href='/css/index.css')
+    link(rel='stylesheet', href='/css/admin_contacts.css')
+    link(rel='stylesheet', href='../css/admin_users.css')
+
+block content
+    div#modal-dark
+    div#barre
+        ul
+            li.icone-admin(id="door-icon-li")
+                img(src="../images/door.png" id="door-icon")
+            li.icone-admin.canvas-icon-li
+                a(href='/admin')
+                    img(src="../images/canvas.png" id="canvas-icon")
+            li.icone-admin.pen-icon-li
+                a(href='/admin/publications')
+                    img(src="../images/edit-2.png" id="pen-icon")
+            li.icone-admin#letter-icon-li
+                img(src="../images/contact.png" id="letter-icon")
+            li.icone-admin#users-icon-li
+                a(href='/admin/users')
+                    img(src="../images/users.png" id="letter-icon")
+            hr
+            li.icone-admin#plus-icon-li
+                img(id="plus-icon" src="../images/plus.png")
+
+    div#newCanvasForm
+        row
+            div.col-sm-12.text-center Nouvel utilisateur
+            div.col-sm-12
+                form(method='POST' action='users/add')
+                    if errors
+                        each err in errors
+                            p #{err.msg}
+                    div.form-group
+                        label(for='titre') Nom d'utilisateur :
+                        input.form-control(type='text', name='username', placeholder='nom d\'utilisateur')
+                    div.form-group
+                        label(for='technique') Mot de passe :
+                        input.form-control(type="text" name='password', placeholder='mot de passe')
+                    div.form-group
+                        button.btn.btn-primary(type='submit') Enregistrer
+
+
+block script
+    script(src="../javascripts/admin_index.js")

@@ -4,7 +4,7 @@ var Article = require('../models/Article').model();
 const adminController = require('../controllers/adminControllers/adminController');
 const adminPublicationsController = require('../controllers/adminControllers/adminPublicationsController');
 const adminMessagesController = require('../controllers/adminControllers/adminMessagesController');
-
+const adminUsersController = require('../controllers/adminControllers/adminUsersController');
 
 /* GET page principale admin. */
 router.get('/', adminController.adminHomePage);
@@ -33,5 +33,8 @@ router.get('/messages', adminMessagesController.messagesPage);
 
 router.get('/messages/delete/:id', adminMessagesController.deleteMessage);
 
+router.get('/users', adminUsersController.users_page_get)
+
+router.post('/users/add', adminUsersController.add_user)
 
 module.exports = router;

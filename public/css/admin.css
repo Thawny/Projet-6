@@ -63,6 +63,10 @@
     margin-top: 10px; }
     #barre #letter-icon-li #letter-icon {
       margin-left: 27%; }
+  #barre #users-icon-li {
+    margin-top: 0px; }
+    #barre #users-icon-li #letter-icon {
+      margin-left: 27%; }
   #barre #plus-icon-li img {
     width: 50%;
     margin-left: 25%;
@@ -110,7 +114,6 @@
   position: fixed;
   background-color: white;
   top: 25vh;
-  left: 20vw;
   width: 60vw;
   height: 340px;
   z-index: 9000000000000;

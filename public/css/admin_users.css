@@ -1,16 +1,6 @@
 body {
   color: #727374; }
 
-#modal-dark {
-  position: fixed;
-  height: 101vh;
-  width: 105vw;
-  background-color: blue;
-  z-index: 100;
-  margin: -10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: none; }
-
 #barre {
   width: 4.7%;
   min-width: 4.7% !important;
@@ -94,26 +84,4 @@ div#messageContainer {
     width: 100%;
     padding-top: 40vh; }
 
-#newCanvasForm {
-  position: fixed;
-  background-color: white;
-  top: 25vh;
-  width: 60vw;
-  height: 340px;
-  z-index: 9000000000000;
-  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 4px;
-  visibility: hidden;
-  opacity: 0; }
-  #newCanvasForm form {
-    margin-top: 10px; }
-  #newCanvasForm .text-center {
-    font-weight: bold;
-    height: 8vh;
-    padding-top: 10px;
-    box-sizing: border-box;
-    vertical-align: middle; }
-  #newCanvasForm button {
-    margin-top: 5px; }
-
-/*# sourceMappingURL=admin_contacts.css.map */
+/*# sourceMappingURL=admin_users.css.map */

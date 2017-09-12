@@ -1,0 +1,16 @@
+extends layout
+
+block style
+    link(rel='stylesheet', href='/css/login.css')
+
+block content
+    div.container-fluid
+        div.row
+            div.col-sm-8.col-sm-offset-2
+                form(method='post')
+                    div.form-group
+                        input.form-control(type='text', name='username', placeholder='Identifiant')
+                    div.form-group
+                        input.form-control(type='password', placeholder='Mot de passe')
+                    div.form-group
+                        button.btn(type='submit') Envoyer

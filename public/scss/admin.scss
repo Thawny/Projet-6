@@ -92,6 +92,13 @@
             margin-left: 27%;
         }
     }
+    #users-icon-li {
+        margin-top: 0px;
+        #letter-icon {
+            // margin-left: 16px;
+            margin-left: 27%;
+        }
+    }
     #plus-icon-li {
         // border: 1px solid pink;
         img {
@@ -149,7 +156,7 @@
     position: fixed;
     background-color: white;
     top: 25vh;
-    left: 20vw;
+    // left: 20vw;
     width: 60vw;
     height: 340px;
     z-index: 9000000000000;
