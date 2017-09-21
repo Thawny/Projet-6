@@ -37,4 +37,7 @@ router.get('/users', adminUsersController.users_page_get)
 
 router.post('/users/add', adminUsersController.add_user)
 
+router.get('/logout', adminController.logout)
+
+
 module.exports = router;

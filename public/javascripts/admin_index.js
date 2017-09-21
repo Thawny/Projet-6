@@ -27,7 +27,7 @@ var $modalDark = $('#modal-dark');
 $plusIcon.click(function() {
     // $form.css("visibility", "visible");
     $modalDark.fadeIn();
-    $form.css('visibility', 'visible').css('margin-left', computeModalLeftMargin());
+    $form.css('visibility', 'visible').css('margin-left', computeModalFormLeftMargin());
     $form.animate({opacity: '1' ,top: '20vh'}, 300);
     $modalDark.click(function() {
         $form.animate({opacity: '0' ,top: '25vh'}, 300);
@@ -51,7 +51,7 @@ $('.circle').hover(
     }
 )
 
-function computeModalLeftMargin() {
+function computeModalFormLeftMargin() {
     var windowWidth = $(window).width();
     var modalWidth = $form.width();
     var marginLeft = (windowWidth - modalWidth)/2;

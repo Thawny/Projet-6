@@ -7,8 +7,11 @@ const loginController = require('../controllers/loginController');
 router.get('/', loginController.login_page_get);
 
 /* POST page login */
-router.post('/',passport.authenticate('local', { successRedirect: '/admin',
-                               failureRedirect: '/login',
-                               failureFlash: true }));
+router.post('/', loginController.login_page_post);
+
+/* POST page login */
+// router.post('/',passport.authenticate('local', { successRedirect: '/admin',
+//                                failureRedirect: '/login',
+//                                failureFlash: true }));
 
 module.exports = router;

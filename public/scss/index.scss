@@ -77,12 +77,6 @@ body {
     padding: 5px;
     padding-right: 0;
     aside {
-        height: 99.2vh;
-        width: 23%;
-        position: fixed;
-        border-bottom: 4px solid #e4e4e4;
-        background-color: $darkgray;
-        color : white;
         h1 {
             margin-left: 6%;
         }
@@ -177,6 +171,7 @@ body {
             bottom: 20px;
             div {
                 // border: 1px solid blue;
+                min-width: 50px;
             }
         }
         #fb {
@@ -255,4 +250,120 @@ body {
             margin-top: 0 !important;
         }
     }
+}
+
+aside {
+    background-color: $darkgray;
+    color : white;
+    border-bottom: 4px solid #e4e4e4;
+    position: fixed;
+    height: 99.2vh;
+    z-index: 10;
+}
+
+@media only screen and (min-width: 1000px) {
+    aside {
+        width: 23%;
+    }
+}
+// ===================   T A B L E T T E S ( moins de 1000px ) ==========
+
+
+@media only screen and (max-width: 1000px) and (min-width: 600px)  {
+    aside {
+        width: 7%;
+        #hide-when-small {
+            display: none;
+        }
+    }
+    section {
+        margin-left: 7% !important;
+        width: 92.5% !important;
+    }
+
+}
+
+// =================== M O B I L E S (moins de 530px) ===============
+
+@media only screen and (max-width: 600px) {
+    aside {
+        width: 13%;
+        #hide-when-small {
+            display: none;
+        }
+        #toggle-widget {
+            height: 40px;
+            width: 40px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-top: 10px;
+            transition: transform 0.5s;
+            .white-bar {
+                height: 5px;
+                background-color: white;
+                // border-radius: 3px;
+                //margin-top: 7px;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: background 0.2s;
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    height: 5px;
+                    width: 100%;
+                    // border-radius: 3px;
+                    background-color: white;
+                    transform: translateY(-12px);
+                    transition: transform 0.5s;
+                    transform-origin: 50% 50%;
+                }
+                &::after {
+                    transform: translateY(12px);
+                }
+            }
+            &:hover {
+                .white-bar::before {
+                  transform: translateY(-15px);
+                }
+                .white-bar::after {
+                  transform: translateY(15px);
+                }
+            }
+        }
+        #toggle-widget.is-open {
+            transform: rotate(180deg);
+            .white-bar {
+                background: transparent;
+            }
+            .white-bar::before {
+                transform: translateY(0) rotate(45deg);
+            }
+            .white-bar::after {
+                transform: translateY(0) rotate(-45deg);
+            }
+        }
+    }
+    // #toggle {
+    //     height: 99.2vh;
+    //     width: 23%;
+    //     position: fixed;
+    //     border-bottom: 4px solid #e4e4e4;
+    //     background-color: $darkgray;
+    //     color : white;
+    // }
+    section {
+        margin-left: 13% !important;
+        width: 86.5% !important;
+    }
+    .image-box {
+        width: 100% !important;
+    }
+    #social-icons {
+        justify-content: initial !important;
+    }
+
 }

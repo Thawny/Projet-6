@@ -8,18 +8,19 @@ var session = require('express-session');
 var db = require('./db');
 var helmet = require('helmet');
 var vars = require('./vars');
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+// var passport = require('passport');
+// var LocalStrategy = require('passport-local').Strategy;
 var Article = require('./models/Article').model();
 var Image = require('./models/Image');
 var expressValidator = require('express-validator');
 var flash = require('connect-flash');
 
-
 // var bidule = require('./writeDB');
 // bidule.insert();
 // insertImage('La dame au turban', 'acrylique sur toile', 'LeiC0zDAktNHI0QvlSOC');
 
+// CONTROLLER
+var adminController = require('./controllers/adminControllers/adminController');
 
 // ROUTES
 var index = require('./routes/index');
@@ -46,37 +47,41 @@ app.use(cookieParser());
 app.use(session({
     secret: vars.secret,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: true,
+    cookie : {
+        maxAge: 3600000,
+        httpOnly: false
+    }
 }));
 app.use(flash());
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
-passport.use(new LocalStrategy(
-  function(username, password, done) {
-    User.findOne({ username: username }, function(err, user) {
-      if (err) { return done(err); }
-      if (!user) {
-        return done(null, false, { message: 'Incorrect username.' });
-      }
-      if (!user.validPassword(password)) {
-        return done(null, false, { message: 'Incorrect password.' });
-      }
-      return done(null, user);
-    });
-  }
-));
-
-passport.serializeUser(function(user, done) {
-  done(null, user.id);
-});
-
-passport.deserializeUser(function(id, done) {
-  User.findById(id, function (err, user) {
-    done(err, user);
-  });
-});
+// passport.use(new LocalStrategy(
+//   function(username, password, done) {
+//     User.findOne({ username: username }, function(err, user) {
+//       if (err) { return done(err); }
+//       if (!user) {
+//         return done(null, false, { message: 'Incorrect username.' });
+//       }
+//       if (!user.validPassword(password)) {
+//         return done(null, false, { message: 'Incorrect password.' });
+//       }
+//       return done(null, user);
+//     });
+//   }
+// ));
+//
+// passport.serializeUser(function(user, done) {
+//   done(null, user.id);
+// });
+//
+// passport.deserializeUser(function(id, done) {
+//   User.findById(id, function (err, user) {
+//     done(err, user);
+//   });
+// });
 
 
 app.use('/', index);
@@ -84,7 +89,7 @@ app.use('/users', users);
 app.use('/publications', publications);
 app.use('/contacts', contacts);
 app.use('/login', login);
-app.use('/admin', admin);
+app.use('/admin',adminController.checkAdminPrivileges, admin);
 
 
 // catch 404 and forward to error handler

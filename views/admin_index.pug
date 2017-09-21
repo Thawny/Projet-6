@@ -9,9 +9,11 @@ block content
   div#barre
     ul
         li.icone-admin(id="door-icon-li")
-            img(src="images/door.png" id="door-icon")
+            a(href='/admin/logout')
+                img(src="images/door.png" id="door-icon")
         li.icone-admin.canvas-icon-li
-            img(src="images/canvas.png" id="canvas-icon")
+            a(href='/admin')
+                img(src="images/canvas.png" id="canvas-icon")
         li.icone-admin.pen-icon-li
             a(href='/admin/publications')
                 img(src="images/edit-2.png" id="pen-icon")

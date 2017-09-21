@@ -1,4 +1,5 @@
 const Image = require('../../models/Image');
+const User = require('../../models/User');
 const Article = require('../../models/Article').model();
 const randomId = require('random-id');
 const path = require('path');
@@ -6,8 +7,16 @@ const fs = require('fs');
 
 
 /* MIDDELWARES */
-exports.checkAdminPrivileges = function(req, res) {
-    //TODO: check admin privileges
+
+//
+exports.checkAdminPrivileges = function(req, res, next) {
+    // Vérifier que la session de l'utilisateur contient bien un username et pw identique à ceux en bdd
+    if (req.session.username && req.session.password) {
+        next();
+    } else {
+        // redirection vers page de login
+        res.redirect('/login')
+    }
 }
 /*END MIDDELWARES*/
 
@@ -44,4 +53,10 @@ exports.deleteCanvas = function(req, res, next) {
             res.redirect('/admin');
         }
     );
+}
+
+exports.logout = function(req, res, next) {
+    req.session.destroy(function(err) {
+        res.redirect('/');
+    })
 }

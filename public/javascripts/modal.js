@@ -6,11 +6,10 @@ function modalOn(target) {
     maxBox = maxBoxFactory();
     modalBox = modalBoxFactory(target);
 
-    // TODO: vérifier que modalBox n'est pas trop grand en largeur par rapport à maxBox
+    // vérifie que modalBox n'est pas trop grand en largeur par rapport à maxBox
     if (maxBox.width < modalBox.totalWidth) {
         recomputeModalSize();
     }
-
 
     $target = $(target);
     $("#modal-dark").fadeIn();
@@ -27,13 +26,10 @@ function modalOn(target) {
         $("#modal-image").fadeOut();
     });
 
-
-
 }
 
 
-
-// MAXBOX FACTORY
+// MAXBOX CONSTRUCTOR
 function maxBoxFactory() {
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
@@ -43,7 +39,7 @@ function maxBoxFactory() {
     }
 }
 
-// MODALBOX FACTORY
+// MODALBOX CONSTRUCTOR
 function modalBoxFactory(sourceImage) {
     var $sourceImage = $(sourceImage);
     var sourceImageHeight = toNumber($sourceImage.css('height'));
@@ -88,7 +84,9 @@ function recomputeModalSize() {
 
 function computeModalLeftMargin() {
     var windowWidth = $(window).width();
+    console.log(`window width : ${windowWidth}`)
     var modalWidth = modalBox.totalWidth;
+    console.log(`modal width : ${modalWidth}`)
     return (windowWidth - modalWidth) / 2;
 
 }

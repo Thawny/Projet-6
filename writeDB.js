@@ -82,10 +82,30 @@ exports.insert = function() {
     // asiatique.save();
     // cigarrette.save();
 
-    const User = require('./models/User');
+    // const User = require('./models/User');
+    // var newUser = new User({
+    //     username: 'tony',
+    //     password: 'coloxoteb'
+    // })
+    // newUser.save();
+
+
+}
+
+var mongoose = require('mongoose');
+
+var db = 'mongodb://127.0.0.1:27017/christianDB';
+
+mongoose.connect(db);
+const bcrypt = require('bcrypt');
+
+const User = require('./models/User');
+
+
+bcrypt.hash('urisob', 10, function(err, hash) {
     var newUser = new User({
-        username: 'tony',
-        password: 'coloxoteb'
+        username: 'pierre',
+        password: hash
     })
     newUser.save();
-}
+});
