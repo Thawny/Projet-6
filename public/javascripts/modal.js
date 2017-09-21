@@ -2,9 +2,10 @@
 var modalBox;
 var maxBox;
 function modalOn(target) {
+    var isSmallScreen = $(window).width() < 600
     if ($(target).is('.forHover')) target = $(target).next();
     maxBox = maxBoxFactory();
-    modalBox = modalBoxFactory(target);
+    modalBox = modalBoxFactory(target, isSmallScreen);
 
     // vérifie que modalBox n'est pas trop grand en largeur par rapport à maxBox
     if (maxBox.width < modalBox.totalWidth) {
@@ -18,8 +19,12 @@ function modalOn(target) {
     $('#modal-meta > h2').text(modalBox.title);
     $('#modal-meta > h4').text(modalBox.method);
     $('#modal-image').fadeIn();
-    $('#modal-image').css('margin-left', toPixel(computeModalLeftMargin())).css('margin-top', computeModalTopMargin()).fadeIn();
-    $('#modal-meta').css('width', toPixel(modalBox.metaWidth));
+    $('#modal-image').css('margin-left', toPixel(computeModalLeftMargin())).css('margin-top', computeModalTopMargin(isSmallScreen)).fadeIn();
+    if (isSmallScreen) {
+        $('#modal-meta').css('width', toPixel(modalBox.x));
+    } else {
+        $('#modal-meta').css('width', toPixel(modalBox.metaWidth));
+    }
 
     $("#modal-dark").one("click", function() {
         $("#modal-dark").fadeOut();
@@ -40,13 +45,13 @@ function maxBoxFactory() {
 }
 
 // MODALBOX CONSTRUCTOR
-function modalBoxFactory(sourceImage) {
+function modalBoxFactory(sourceImage, isSmallScreen) {
     var $sourceImage = $(sourceImage);
     var sourceImageHeight = toNumber($sourceImage.css('height'));
     var sourceImageWidth = toNumber($sourceImage.css('width'));
     var windowWidth = $(window).width();
     var imageHeight = 95/100 * $(window).height();
-    var metaWidth = 20/100 * windowWidth;
+    var metaWidth = isSmallScreen ? 0 : 20/100 * windowWidth;
     var x = computeImageWidth();
     function computeImageWidth() {
         increaseRatio = imageHeight / sourceImageHeight;
@@ -91,7 +96,8 @@ function computeModalLeftMargin() {
 
 }
 
-function computeModalTopMargin() {
+function computeModalTopMargin(isSmallScreen) {
+    if (isSmallScreen) return "10px";
     var windowHeight = $(window).height();
     var modalHeight = modalBox.y;
     return (windowHeight - modalHeight) / 2;

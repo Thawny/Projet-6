@@ -286,6 +286,9 @@ aside {
 // =================== M O B I L E S (moins de 530px) ===============
 
 @media only screen and (max-width: 600px) {
+    .display-block {
+        display: block !important;
+    }
     aside {
         width: 13%;
         #hide-when-small {

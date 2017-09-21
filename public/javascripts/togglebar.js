@@ -18,17 +18,16 @@ $toggleWidget.on('click', function() {
                      .css('top', '10px')
                      .css('right', right);
         $toggleWidget.addClass('is-open').removeClass('is-closed');
-        $toggleWidget.animate({transform: "rotate(180deg) !important"}, 400);
 
         $aside.animate({width: "99.5%"}, 400, function(){
             $hideWhenSmall.css('display', 'block');
         })
         isClicked = true;
+
     } else {
         $hideWhenSmall.css('display', 'none');
         $toggleWidget.addClass('is-closed').removeClass('is-open');
         $aside.animate({width: "13%"}, 400)
-        $toggleWidget.animate({transform: "rotate(180deg) !important"}, 400);
         isClicked = false;
     }
 
