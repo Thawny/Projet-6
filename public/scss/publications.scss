@@ -33,12 +33,6 @@ body {
     padding: 5px;
     padding-right: 0;
     aside {
-        height: 99.2vh;
-        width: 23%;
-        position: fixed;
-        border-bottom: 4px solid #e4e4e4;
-        background-color: $darkgray;
-        color : white;
         h1 {
             margin-left: 6%;
         }
@@ -79,7 +73,7 @@ body {
                 list-style-type: none;
                 color: white;
                 margin-left: 0;
-                // border: 1px solid orange;
+                position: absolute;
 
                 a {
                     color: white;
@@ -89,18 +83,46 @@ body {
                     color: white;
                     cursor: pointer;
                 }
+                .hover-menu {
+                    width: 100%;
+                    height: 10px;
+                    background-color: rgb(255, 153, 0);
+                    opacity: 0;
+                    position: absolute;
+                    // transform: translateY(-10px);
+                    transform: translateY(-2px);
+                    transition: all 0.4s;
+
+                }
+                .hover-now {
+                    opacity: 0.8;
+                    transform: translateY(-10px);
+
+                }
             }
             li:hover {
             }
             #galerie {
-                // border-top: $borderNav;
             }
             #billets {
-                // border-top: $borderNav;
+                margin-top: 40px;
             }
             #contacts {
-                // border-top: $borderNav;
-                // border-bottom: $borderNav;
+                margin-top: 80px;
+            }
+        }
+        #social-icons {
+            // border: 1px solid pink;
+            position: absolute;
+            justify-content: space-between;
+            padding-left: 30px;
+            padding-right: 30px;
+            display: flex;
+            width: 100%;
+            bottom: 20px;
+            div {
+                // border: 1px solid blue;
+                min-width: 50px;
             }
         }
         #fb {
@@ -110,7 +132,7 @@ body {
             background-size: 100%;
             // border: 1px solid red;
             margin-left: 0px;
-            margin-top: 40px;
+            // margin-top: 40px;
             background-position: 50% top;
             transition: background-position 0.2s;
             display: inline-block;
@@ -126,7 +148,7 @@ body {
             background-size: 100%;
             // border: 1px solid red;
             margin-left: 20px;
-            margin-top: 40px;
+            // margin-top: 40px;
             background-position: 50% top;
             transition: background-position 0.2s;
         }
@@ -141,7 +163,7 @@ body {
             background-size: 100%;
             // border: 1px solid red;
             margin-left: 20px;
-            margin-top: 40px;
+            // margin-top: 40px;
             background-position: 50% top;
             transition: background-position 0.2s;
         }
@@ -208,4 +230,124 @@ body {
             margin-top: 0 !important;
         }
     }
+}
+
+
+aside {
+    background-color: $darkgray;
+    color : white;
+    border-bottom: 4px solid #e4e4e4;
+    position: fixed;
+    height: 99.2vh;
+    z-index: 10;
+}
+
+@media only screen and (min-width: 1000px) {
+    aside {
+        width: 23%;
+    }
+}
+// ===================   T A B L E T T E S ( moins de 1000px ) ==========
+
+
+@media only screen and (max-width: 1000px) and (min-width: 600px)  {
+    aside {
+        width: 7%;
+        #hide-when-small {
+            display: none;
+        }
+    }
+    section {
+        margin-left: 7% !important;
+        width: 92.5% !important;
+    }
+
+}
+
+// =================== M O B I L E S (moins de 530px) ===============
+
+@media only screen and (max-width: 600px) {
+    .display-block {
+        display: block !important;
+    }
+    aside {
+        width: 13%;
+        #hide-when-small {
+            display: none;
+        }
+        #toggle-widget {
+            height: 40px;
+            width: 40px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-top: 10px;
+            transition: transform 0.5s;
+            .white-bar {
+                height: 5px;
+                background-color: white;
+                // border-radius: 3px;
+                //margin-top: 7px;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: background 0.2s;
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    height: 5px;
+                    width: 100%;
+                    // border-radius: 3px;
+                    background-color: white;
+                    transform: translateY(-12px);
+                    transition: transform 0.5s;
+                    transform-origin: 50% 50%;
+                }
+                &::after {
+                    transform: translateY(12px);
+                }
+            }
+            &:hover {
+                .white-bar::before {
+                  transform: translateY(-15px);
+                }
+                .white-bar::after {
+                  transform: translateY(15px);
+                }
+            }
+        }
+        #toggle-widget.is-open {
+            transform: rotate(180deg);
+            .white-bar {
+                background: transparent;
+            }
+            .white-bar::before {
+                transform: translateY(0) rotate(45deg);
+            }
+            .white-bar::after {
+                transform: translateY(0) rotate(-45deg);
+            }
+        }
+    }
+    // #toggle {
+    //     height: 99.2vh;
+    //     width: 23%;
+    //     position: fixed;
+    //     border-bottom: 4px solid #e4e4e4;
+    //     background-color: $darkgray;
+    //     color : white;
+    // }
+    section {
+        margin-left: 13% !important;
+        width: 86.5% !important;
+    }
+    .image-box {
+        width: 94% !important;
+    }
+    #social-icons {
+        justify-content: initial !important;
+    }
+
 }

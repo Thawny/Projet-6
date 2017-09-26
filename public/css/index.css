@@ -84,16 +84,29 @@ body {
       font-size: 1.2em;
       list-style-type: none;
       color: white;
-      margin-left: 0; }
+      margin-left: 0;
+      position: absolute; }
       body aside ul li a {
         color: white; }
       body aside ul li a:hover {
         text-decoration: none !important;
         color: white;
         cursor: pointer; }
-    body aside ul #galerie a:hover {
-      border-left: 2px solid orange;
-      padding-left: 5px; }
+      body aside ul li .hover-menu {
+        width: 100%;
+        height: 10px;
+        background-color: #ff9900;
+        opacity: 0;
+        position: absolute;
+        transform: translateY(-2px);
+        transition: all 0.4s; }
+      body aside ul li .hover-now {
+        opacity: 0.8;
+        transform: translateY(-10px); }
+    body aside ul #billets {
+      margin-top: 40px; }
+    body aside ul #contacts {
+      margin-top: 80px; }
   body aside #social-icons {
     position: absolute;
     justify-content: space-between;

@@ -1,8 +1,16 @@
+body {
+    background-color: #e4e4e4;
+}
 .container-fluid {
-    padding-top: 30vh;
+    margin-top: 50vh;
+    transform: translateY(-50%);
     form {
         border-radius: 15px;
-        background-color: lighten(lightblue, 13%);
+        // background-color: lighten(lightblue, 13%);
         padding: 20px 20px 10px 20px;
+        button {
+            background-color: #727374;
+            color: white;
+        }
     }
 }

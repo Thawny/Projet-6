@@ -33,7 +33,7 @@ button {
   display: block;
   background-color: #727374; }
 
-.text-center {
+#rightSection .text-center {
   padding-top: 5%;
   height: 20%; }
 

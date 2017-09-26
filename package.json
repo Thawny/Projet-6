@@ -12,6 +12,7 @@
     "bcrypt": "^1.0.3",
     "body-parser": "~1.17.1",
     "cheerio": "^1.0.0-rc.2",
+    "compression": "^1.7.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
@@ -26,7 +27,6 @@
     "pug": "~2.0.0-beta11",
     "random-id": "0.0.2",
     "serve-favicon": "~2.4.2"
-
   },
   "devDependencies": {
     "express-validator": "^3.2.1",

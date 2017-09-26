@@ -8,38 +8,46 @@ block content
   div#top
 
   aside
-     h1 Christian
-       br
-       | Louis
-       br
-       | Malto
-     h3 Peintre
+      div#toggle-widget.is-closed
+       div.white-bar
+      div#hide-when-small
+        h1 Christian
+            br
+            | Louis
+            br
+            | Malto
+        h3 Peintre
 
 
-     p
-       |Procedente igitur mox tempore cum adventicium nihil inveniretur,
-       |relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt
-       |ibique densis intersaepientes itinera praetenturis provincialium et viatorum opibus pascebantur.
+        p
+            |Procedente igitur mox tempore cum adventicium nihil inveniretur,
+            |relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt
+            |ibique densis intersaepientes itinera praetenturis provincialium et viatorum opibus pascebantur.
 
 
-     ul
-       li#galerie
-            a(href="/") Galerie
-       li#billets
-            a(href="/publications") Actualité
-       li#contacts
-            a(href="/contacts") Me contacter
+        ul
+            li#galerie
+                a(href="/") Galerie
+                    div.hover-menu
+            li#billets
+                a(href="/publications") Actualités
+                    div.hover-menu
+            li#contacts
+                a(href="/contacts") Me contacter
+                    div.hover-menu
 
 
-
-
+        div#social-icons.text-center
+            div#fb
+            div#pinterest
+            div#blogger            
 
 
 
   section#masonry
      div.article-box
         div.article-body
-            h4 Nouvelle exposition à Truc-Sur-Mer
+            h4 Nouvelle exposition à Trifouilli-Lès-Oie
             hr
             p
                 | Plusieurs variations de Lorem Ipsum peuvent être trouvées
@@ -108,5 +116,7 @@ block content
 
 
 block script
+    script(src="javascripts/togglebar.js")
     script(src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
     script(src="javascripts/masonry-publications.js")
+    script(src="javascripts/hoverMenu.js")

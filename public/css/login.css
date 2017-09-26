@@ -1,8 +1,14 @@
+body {
+  background-color: #e4e4e4; }
+
 .container-fluid {
-  padding-top: 30vh; }
+  margin-top: 50vh;
+  transform: translateY(-50%); }
   .container-fluid form {
     border-radius: 15px;
-    background-color: #e0f0f5;
     padding: 20px 20px 10px 20px; }
+    .container-fluid form button {
+      background-color: #727374;
+      color: white; }
 
 /*# sourceMappingURL=login.css.map */
