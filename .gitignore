@@ -4,4 +4,4 @@ public/uploads
 data
 .sass-cache
 /vars.js
-/writeDB.js
+writeDB.js
