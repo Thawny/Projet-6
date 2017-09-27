@@ -32,3 +32,9 @@ $toggleWidget.on('click', function() {
     }
 
 })
+
+// $(window).resize(function() {
+//     if ($(window).width() > 1000) {
+//         $aside.css('width', "23%")
+//     }
+// })

@@ -2,3 +2,6 @@ node_modules
 public/images
 public/uploads
 data
+.sass-cache
+vars.js
+writeDB.js

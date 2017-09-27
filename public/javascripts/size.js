@@ -12,7 +12,7 @@ $(document).ready(function() {
         }
     }
     function displaySize(height, width) {
-        var widget = '<div class="widget" style="position:fixed;top:10px;right:-40px;z-index:200;font-weight:bold;height:100px;width:100px"><p>'+ height +'</p> <p>'+ width + '</p></div>';
+        var widget = '<div class="widget" style="position:fixed;top:100px;right:-40px;z-index:200;font-weight:bold;height:100px;width:100px"><p>'+ height +'</p> <p>'+ width + '</p></div>';
         $(widget).prependTo("body");
     }
     $(window).resize(function(){

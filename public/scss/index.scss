@@ -262,7 +262,7 @@ aside {
     z-index: 10;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1001px) {
     aside {
         width: 23%;
     }
@@ -270,23 +270,23 @@ aside {
 // ===================   T A B L E T T E S ( moins de 1000px ) ==========
 
 
-@media only screen and (max-width: 1000px) and (min-width: 600px)  {
-    aside {
-        width: 7%;
-        #hide-when-small {
-            display: none;
-        }
-    }
-    section {
-        margin-left: 7% !important;
-        width: 92.5% !important;
-    }
-
-}
+// @media only screen and (max-width: 1000px) and (min-width: 600px)  {
+//     aside {
+//         width: 7%;
+//         #hide-when-small {
+//             display: none;
+//         }
+//     }
+//     section {
+//         margin-left: 7% !important;
+//         width: 92.5% !important;
+//     }
+//
+// }
 
 // =================== M O B I L E S (moins de 530px) ===============
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     .display-block {
         display: block !important;
     }
@@ -363,11 +363,19 @@ aside {
         margin-left: 13% !important;
         width: 86.5% !important;
     }
-    .image-box {
-        width: 100% !important;
-    }
+    // .image-box {
+    //     width: 100% !important;
+    // }
     #social-icons {
         justify-content: initial !important;
     }
 
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .image-box {
+        width: 100% !important;
+    }
 }
