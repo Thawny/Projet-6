@@ -3,5 +3,5 @@ public/images
 public/uploads
 data
 .sass-cache
-/vars.js
+vars.js
 writeDB.js
