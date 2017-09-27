@@ -1,5 +1,5 @@
-# **Projet-6
-Une application CRUD pour un peinte avec NodeJS, le framework Express et MongoDB**
+# Projet-6
+*Une application CRUD pour un peinte avec NodeJS, le framework Express et MongoDB*
 
 C'est le sixième et dernier projet de ma formation. Il répond à la consigne « Contribuez à votre écosystème ».
 Pour cela j’ai choisi de rendre service à mon père, Christian Malto, peintre amateur, en concevant pour lui un site internet.
@@ -12,7 +12,7 @@ ne soit pas particulièrement mise en valeur par ce type d’application, j’ai
 **Préconisations fonctionnelles**
 Le front office
 Le site présentera toutes les fonctionnalités d’une application CRUD (Create, Update, Delete).
-Ces opérations seront possibles sur les tableaux (galerie) et les articles (blog). 
+Ces opérations seront possibles sur les tableaux (galerie) et les articles (blog).
 Deux types d’accés sont à prévoir : le visiteur anonyme et l’administrateur.
 
 La page d’accueil est une galerie des oeuvres de Christian Louis Malto. À gauche, une barre latérale fixe offre dans
